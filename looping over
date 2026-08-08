@@ -1,0 +1,41 @@
+Looping over dictionary keys, values, and items
+student_scores = {"Alice": 95, "Bob": 82, "Charlie": 78}
+
+# Keys only
+for student in student_scores:
+    print("Student:", student)
+
+# Values only
+for score in student_scores.values():
+    print("Score:", score)
+
+# Items (key and value)
+for student, score in student_scores.items():
+    print(f"{student} scored {score}")
+
+# Dictionary with nested data
+student_data = {
+    "Alice": {"age": 17, "grade": "A"},
+    "Bob": {"age": 18, "grade": "B"}
+}
+for name, details in student_data.items():
+    print(name)
+    for key, value in details.items():
+        print(f"  {key}: {value}")
+
+
+Student: Alice
+Student: Bob
+Student: Charlie
+Score: 95
+Score: 82
+Score: 78
+Alice scored 95
+Bob scored 82
+Charlie scored 78
+Alice
+  age: 17
+  grade: A
+Bob
+  age: 18
+  grade: B
